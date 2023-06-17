@@ -9,7 +9,7 @@ a = int(input('Введите длину стороны "a": '))
 b = int(input('Введите длину стороны "b": '))
 c = int(input('Введите длину стороны "c": '))
 
-if (a + b < c) or (a + c < b) or (b + c < a):
+if a + b < c or a + c < b or b + c < a:
     res = 'Треугольник не существует'
 elif a == b or a == c or b == c:
     res = 'Треугольник равнобедреный'
