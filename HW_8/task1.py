@@ -10,7 +10,7 @@ def pickle_to_csv(pickle_file):
     with (open(pickle_file, 'rb') as f1,
           open("users.csv", "w", newline='', encoding='utf-8', ) as f2,
           ):
-        p_file = (pickle.load(f1))
+        p_file = pickle.load(f1)
         field = []
         rows = []
         for item in p_file:
