@@ -11,14 +11,6 @@ def pickle_to_csv(pickle_file):
           open("users.csv", "w", newline='', encoding='utf-8', ) as f2,
           ):
         p_file = pickle.load(f1)
-        field = []
-        rows = []
-        for item in p_file:
-            rows.append(item)
-            for key in item:
-                if key not in field:
-                    field.append(key)
-        level, u_id, name, hash_name = field
-        csv_write = csv.DictWriter(f2, fieldnames=[level, u_id, name, hash_name])
+        csv_write = csv.DictWriter(p_file, fieldnames=p_file[0], encoding='utf-8')
         csv_write.writeheader()
         csv_write.writerows(rows)
