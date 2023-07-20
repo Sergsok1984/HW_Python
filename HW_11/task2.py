@@ -45,7 +45,7 @@ class Matrix:
                 return all(result)
         return False
 
-    def __str__(self) -> str:
+    def __str__(self):
         return '\n'.join(['\t'.join(map(str, row)) for row in self.matrix]) + '\n'
 
 # matr_a = Matrix([[1, 2, 2], [3, 1, 1]])
